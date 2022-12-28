@@ -41,7 +41,9 @@ public class TaskCollection4 implements Comparable <TaskCollection4> {
 
     @Override
     public int compareTo(TaskCollection4 o) {
-        return 0;
+        int result = ((int)this.weight - (int)o.weight);
+
+        return result;
     }
 
     @Override
@@ -72,19 +74,19 @@ public class TaskCollection4 implements Comparable <TaskCollection4> {
         System.out.println(arr);
         System.out.println(getMore5(arr));
 
-
     }
 
-    public static <T> List<T> getMore5 (List <T> list){
+    public static <T extends TaskCollection4> List<T> getMore5 (ArrayList<Float> list){
         ArrayList<T> more5 = new ArrayList<>();
         TaskCollection4 etalon = new TaskCollection4(0, 5.0f);
-        for(T n : list){
-            if (etalon.compareTo(list)){
-                more5.add(n);
-            }
-        }
+
+//        for(T n : list){
+//            if (etalon.compareTo(n) > 5){
+//                more5.add(n);
+//            }
+//        }
         return more5;
-    }
+   }
 
 
 }
