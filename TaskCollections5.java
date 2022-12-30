@@ -52,17 +52,25 @@ public class TaskCollections5 {
         toys.put("Cat", col1);
         toys.put("Dog", col2);
         toys.put("Bear", col3);
-        for(Map.Entry<String, TaskCollections5> s : toys.entrySet()){
-            System.out.println(s);
-        }
-//        System.out.println(toys.keySet());
-//        System.out.println(toys.entrySet());
-//        System.out.println(toys.values());
+        entrySet(toys);
         TaskCollections5 col5 = new TaskCollections5("Dog", "dog1");
         HashMap<String, String> hmap = new HashMap<>();
         hmap.put(col5.getNameToy(), col5.getToy());
-        System.out.println(hmap.entrySet());
+        entrySet(hmap);
+        keySet(hmap);
+        value(hmap);
 
+    }
 
+    public static <K, V> void entrySet (HashMap<K,V> map){
+        System.out.println(map.entrySet());
+    }
+    public static <K, V> void keySet (HashMap<K,V> map){
+        System.out.println(map.keySet());
+    }
+    public static <K, V> void value (HashMap<K,V> map){
+        for(Map.Entry<K,V> s : map.entrySet()){
+            System.out.println(s.getValue());
+        }
     }
 }
