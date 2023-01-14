@@ -41,6 +41,7 @@ public class TaskSerializable1 {
         public static void main(String[] args) {
             Horse horse = new Horse ("name");
             horse.serialize(horse);
+            System.out.println(horse);
             horse.deserialize();
         }
     }
