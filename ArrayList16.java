@@ -13,5 +13,6 @@ public class ArrayList16 {
             clone1.add(n);
         }
         System.out.println(clone1);
+
     }
 }
